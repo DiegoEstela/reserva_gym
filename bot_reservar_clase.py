@@ -111,7 +111,9 @@ def main():
     options = webdriver.ChromeOptions()
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    
+    options.add_argument("--no-user-data-dir")  # Evitar conflictos con el directorio de datos
+    options.add_argument("--headless")  # Ejecutar en modo sin cabeza (sin interfaz gráfica)
+
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     
     try:

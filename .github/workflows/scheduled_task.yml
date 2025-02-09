@@ -1,6 +1,7 @@
 name: Run Python Script on Schedule
 
 on:
+  workflow_dispatch: # Permitir ejecución manual desde la interfaz de GitHub
   schedule:
     # Ejecutar a las 22:00 hora España (21:00 UTC) los sábados y lunes
     - cron: "0 21 * * 6,1" # Sábado y Lunes a las 22:00 CEST (21:00 UTC)
